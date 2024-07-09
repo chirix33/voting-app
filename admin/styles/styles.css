@@ -1,0 +1,77 @@
+2* {
+	font-family: "Roboto Light", Gisha, Arial, 'sans-serif' !important;
+}
+
+.jumbotron {
+	background-color: #2f4f4f !important;
+	color: #fff !important;
+}
+
+div#formWrapper {
+	margin: auto;
+	padding: 10px;
+}
+
+
+fieldset {
+	width: 100%;
+}
+
+input {
+	width: 45%;
+	padding: 5px;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 2px solid #eee;
+	margin-top: 15px;
+}
+
+input:focus {
+	border-bottom: 2px solid #2e6da4;
+}
+
+select {
+	padding: 10px;
+}
+
+
+button .btn-lg {
+	border-radius: 0px !important;
+}
+
+button .btn-primary {
+	background-color: #2f4f4f !important;
+	border-color: #2f4f4f !important;
+}
+
+.selectStyled {
+			width: 100%;
+			border-top: 0px;
+			border-right: 0px;
+			border-left: 0px;
+			border-bottom: 1px solid #2e6da4;
+			background-color: white;
+}
+
+div#setupCandidates {
+	width: 100%;
+	overflow-x: scroll;
+}
+
+div#contact-form {
+	text-align: center;
+	margin: auto;
+	border-top: 3px solid #2f4f4f;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	display: block;
+	padding: 10px;
+	width: 55%;
+}
+
+.p-sized {
+	font-size: 18px;
+	text-align: center;
+}

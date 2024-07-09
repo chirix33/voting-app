@@ -1,0 +1,10 @@
+while ($theElection = mysqli_fetch_assoc($checkForSessionQuery)) {
+			# code...
+			$electionName = $theElection['name'];
+			$overallSQL = "SELECT SUM(result) FROM votecounts WHERE election =  '$electionName'";
+			$overallQuery = mysqli_query($conn, $overallSQL);
+			while ($theOverallNum = mysqli_fetch_assoc($overallQuery)) {
+				# code...
+				echo "<p class='p-sized'>Overall number of votes: <b>".$theOverallNum['SUM(result)']."</b></p>";
+			}
+		}
