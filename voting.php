@@ -3,9 +3,8 @@
 	include 'includes/database.inc.php';
 
 	if (!isset($_POST['election'])) {
-		# code...
 		echo "<p>No election</p>";
-	}else{
+	} else {
 		$election = $_POST['election'];
 		$getPositionsSQL = "SELECT * FROM positions WHERE election = '$election'";
 		$getPositionsQuery = mysqli_query($conn, $getPositionsSQL);
@@ -13,17 +12,14 @@
 		$i = 0;
 
 		if (!$getPositionsQuery) {
-			# code...
 			echo "<p>There was an error. Please try again</p>";
 			echo "<a class='btn btn-default' href='vote.php'>Okay</a>";
 		}else{
 				while ($eachPosition = mysqli_fetch_assoc($getPositionsQuery)) {
-					# code...
 					$positions[] = $eachPosition['name'];
 				}
 				echo "<form action='includes/addCount.inc.php' method='POST'>";
 				for ($num=0; $num < $numberOfPositions; $num++) {
-					# code...
 					$sql = "SELECT * FROM candidates WHERE position = '$positions[$num]' AND election = '$election'";
 					$query = mysqli_query($conn, $sql);
 					if (mysqli_num_rows($query) < 1) {
@@ -44,13 +40,13 @@
 							if ($candidate['picture'] == '') {
 								# code...
 								echo "<td>";
-								echo "<img class='voting-img' width='140' height='180' src='media/profiledefault.jpg'>";
-								echo "<input type='radio' value='".$candidate['name']."' name='candidate".$num."'>";
+								echo "<label> <img class='voting-img' width='140' height='180' src='media/profiledefault.jpg'>";
+								echo "<input type='radio' value='".$candidate['name']."' name='candidate".$num."'></label>";
 								echo "</td>";
 							}else{
 								echo "<td>";
-								echo "<img class='voting-img' width='140' height='180' src='".$candidate['picture']."'>";
-								echo "<input type='radio' value='".$candidate['name']."' name='candidate".$num."'>";
+								echo "<label>img class='voting-img' width='140' height='180' src='".$candidate['picture']."'>";
+								echo "<input type='radio' value='".$candidate['name']."' name='candidate".$num."'></label>";
 								echo "</td>";
 							}
 						}

@@ -5,7 +5,7 @@ session_start();
 if (!isset($_SESSION['studentId'])) {
 	header("Location: index.php");
 	exit();
-}else{
+} else {
 	 $studentId = $_SESSION['studentId'];
 
 	 $getNameSQL = "SELECT * FROM students WHERE users = '$studentId'";
@@ -49,7 +49,7 @@ if (!isset($_SESSION['studentId'])) {
 					$("#showBody").hide().load("voting.php",
 						{
 							election : theElection
-						}).hide(1100).show(1100);
+						}).hide(1000).show(1000);
 				});
 
 			});
