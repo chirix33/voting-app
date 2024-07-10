@@ -40,12 +40,12 @@
 							if ($candidate['picture'] == '') {
 								# code...
 								echo "<td>";
-								echo "<label> <img class='voting-img' width='140' height='180' src='media/profiledefault.jpg'>";
+								echo "<label><img class='voting-img' width='140' height='180' src='media/profiledefault.jpg'>";
 								echo "<input type='radio' value='".$candidate['name']."' name='candidate".$num."'></label>";
 								echo "</td>";
 							}else{
 								echo "<td>";
-								echo "<label>img class='voting-img' width='140' height='180' src='".$candidate['picture']."'>";
+								echo "<label><img class='voting-img' width='140' height='180' src='".$candidate['picture']."'>";
 								echo "<input type='radio' value='".$candidate['name']."' name='candidate".$num."'></label>";
 								echo "</td>";
 							}
