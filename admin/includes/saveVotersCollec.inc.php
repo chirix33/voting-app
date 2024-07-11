@@ -25,7 +25,6 @@
 
 				$importFile = mysqli_query($conn, $importSQL);
 
-
 				if (!$importFile) {
 					header("Location: ../vote.settings.php?upload=error");
 					exit();
